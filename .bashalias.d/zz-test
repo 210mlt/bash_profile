@@ -1,0 +1,6 @@
+alias 'tt=echo 2'
+alias 'tread=read -p "input> " tmp && echo "$tmp"'
+
+alias 'vtread=while IFS="" read -r p || [ -n "$p" ]; do echo "$p"; done <<< '
+alias 'cvtread=while IFS="" read -r p || [ -n "$p" ]; do echo "$p" && cd $p && break; done <<< '
+

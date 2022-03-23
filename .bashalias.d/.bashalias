@@ -1,0 +1,38 @@
+#!/bin/bash
+# Put your fun stuff here.
+
+alias 't=echo "test!"'
+alias 'r=cd /'
+alias 'h=cd ~'
+alias 'd=cd ~/.dwm'
+alias 's=cd ~/scripts'
+
+altval="\e[106;91m"
+normal="\e[0m"
+a='bresrc=source ~/.bash_profile && echo -e "'
+b="${altval}re-sourced .bash_profile!${normal}"
+c='"'
+alias "${a}${b}${c}"
+#alias 'bresrc=source ~/.bash_profile && echo "re-sourced .bash_profile!"'
+alias 'edit=$EDITOR'
+alias 'balias-edit=$EDITOR ~/.bashalias && bresrc'
+alias 'brc-edit=$EDITOR ~/.bashrc && bresrc'
+alias 'bprompt-edit=$EDITOR ~/.bashprompt && bresrc'
+alias 'baction-edit=$EDITOR ~/.bash_action.sh'
+
+alias 'semerge=emerge --search'
+alias 'eaccept_keywords=edit /etc/portage/package.accept_keywords'
+alias 'emerge-use-update=emerge --ask --verbose --update --deep --changed-use @world'
+
+alias 'brightness=/home/damian/scripts/setbrightness.sh'
+
+alias 'kmenu=cd /usr/src/linux && sudo make menuconfig'
+
+
+up="cd .."
+alias "..=$up"
+for i in {2..9}
+do
+	up="$up/.."
+	alias "..$i=$up"
+done

@@ -1,0 +1,6 @@
+#!/bin/bash
+# Put your fun stuff here.
+
+alias 'brightness=/home/damian/scripts/setbrightness.sh'
+
+alias 'kmenu=cd /usr/src/linux && sudo make menuconfig'

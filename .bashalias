@@ -1,0 +1,7 @@
+#!/bin/bash
+# Put your fun stuff here.
+for file in $HOME/.bashalias.d/*; do
+	#echo "$file"
+	source "$file"
+done
+

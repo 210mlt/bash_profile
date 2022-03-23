@@ -1,0 +1,2 @@
+alias 'tt=echo 1'
+alias 't=echo "test!"'

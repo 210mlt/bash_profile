@@ -1,0 +1,16 @@
+#!/bin/bash
+# Put your fun stuff here.
+
+alias 'r=cd /'
+alias 'h=cd ~'
+alias '.d=cd ~/.dwm'
+alias 's=cd ~/scripts'
+alias '.b= cd ~/.bashalias.d'
+
+up="cd .."
+alias "..=$up"
+for i in {2..9}
+do
+	up="$up/.."
+	alias "..$i=$up"
+done

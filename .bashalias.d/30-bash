@@ -1,0 +1,27 @@
+#!/bin/bash
+# Put your fun stuff here.
+
+altval="\e[106;91m"
+normal="\e[0m"
+a='bresrc=source ~/.bash_profile && echo -e "'
+b="${altval}re-sourced .bash_profile!${normal}"
+c='"'
+alias "${a}${b}${c}"
+#alias 'bresrc=source ~/.bash_profile && echo "re-sourced .bash_profile!"'
+
+a='balias-edit'
+b=''
+c='=$EDITOR ~/.bashalias'
+d=''
+e=' && bresrc'
+#alias 'balias-edit=$EDITOR ~/.bashalias && bresrc'
+alias "${a}${b}${c}${d}${e}"
+for file in $HOME/.bashalias.d/*; do
+	b=$(echo "$file" | awk '{print $NF}' FS='/')
+	#echo "$b"
+        alias "${a}-${b}${c}.d/${b}${e}"
+done
+
+alias 'brc-edit=$EDITOR ~/.bashrc && bresrc'
+alias 'bprompt-edit=$EDITOR ~/.bashprompt && bresrc'
+alias 'baction-edit=$EDITOR ~/.bash_action.sh'

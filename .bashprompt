@@ -1,0 +1,37 @@
+#!/bin/bash
+# Put your fun stuff here.
+#export PS1="\[\e[01;31;103m\]\u@\h\[\e[01;34m\] \w \$\[\e[00m\] "
+
+#demo1
+line="\[\e[0;38;5;118m\]"
+valspc="\[\e[1;48;5;118;1;38;5;16m\]"
+altval="\[\e[91m\]"
+dflt="\[\e[0m\]"
+date="\D{%a %d.%m.%y}"
+titlebar="\[\e]2;st-\u (\W)\a\]"
+isroot="\\$"
+afunct='$($HOME/.bash_action.sh "beep" &)'
+if [ "$(pgrep -u $USER dwm)" = "" ]; then
+	#WM proc not found -> not started / not in current users controll
+	#so no related fnction possible
+	afunct=""
+fi
+#afunct=""
+
+export PS1="${titlebar}\n${line}┏━━━━┫${valspc}   \u   "
+export PS1="${PS1}${line}┣━━┫${valspc} ${date} ${line}┣━━┫${valspc} \w ${line}┣━━━━━\n"
+export PS1="${PS1}┃       ${altval}\h       \s (\j)       ${TERM}${line} \n"
+export PS1="${PS1}${line}┗━━${altval}${isroot}${line}❱${dflt}${afunct} "
+export PS2="${altval}➤${dflt} " #➲ "
+#demo2
+#export PS1="\[\e]0;[\w]\a\r\e[1;38;5;118;48;5;16m\] \u \[\e[38;5;16;48;5;118m\] \h \[\e[0m\] \$ "
+
+
+line=""
+valspc=""
+altval=""
+dflt=""
+date=""
+titlebar=""
+isroot=""
+afunct=""

@@ -1,0 +1,7 @@
+#!/bin/bash
+# Put your fun stuff here.
+
+alias 'semerge=emerge --search'
+alias 'eaccept_keywords=edit /etc/portage/package.accept_keywords'
+alias 'emerge-use-update=emerge --ask --verbose --update --deep --changed-use @world'
+

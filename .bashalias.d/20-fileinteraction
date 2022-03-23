@@ -1,0 +1,3 @@
+alias 'edit=$EDITOR'
+alias 'mcdir=while IFS="" read -r p || [ -n "$p" ]; do mkdir -p "$p" && cd $p && break; done <<< '
+alias 'la=ls -a'
